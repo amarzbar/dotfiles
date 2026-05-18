@@ -14,7 +14,7 @@ This repository contains my configuration files for Arch Linux with i3, Rofi, Po
 
 2. **Create symlinks:**
     ```bash
-    ln -s -f ~/dotfiles/ ~/.config/
+    ./install.sh
     ```
 
 3. **Install necessary packages:**
@@ -33,3 +33,15 @@ This repository contains my configuration files for Arch Linux with i3, Rofi, Po
 - **Rofi:** `~/.config/rofi/config.rasi`
 - **Polybar:** `~/.config/polybar/config`
 - **Neovim:** `~/.config/nvim/init.vim`
+
+## Wallpaper
+
+The wallpaper is set at i3 startup by `feh` (see `i3/config`):
+
+```
+exec --no-startup-id feh --randomize --bg-fill $HOME/Pictures/Wallpapers/
+```
+
+`feh` picks a random image from `~/Pictures/Wallpapers/` and paints it as the X
+root background. Drop images into that directory to add to the rotation.
+Requires `feh` (`sudo pacman -S feh`).
