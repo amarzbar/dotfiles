@@ -197,9 +197,16 @@ bindsym $mod+r mode "resize"
 #         status_command i3status
 # }
 
-# No title bars on windows 
+# No title bars on windows, but keep a thin border so focus is visible
 
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 2
+
+# Focus hint: bright accent border on the focused window, dim on the rest.
+# class                 border  bg      text    indicator child_border
+client.focused          #88c0d0 #88c0d0 #2e3440 #88c0d0   #88c0d0
+client.focused_inactive #3b4252 #3b4252 #d8dee9 #3b4252   #3b4252
+client.unfocused        #2e3440 #2e3440 #d8dee9 #2e3440   #2e3440
+client.urgent           #bf616a #bf616a #eceff4 #bf616a   #bf616a
 
 #
 
