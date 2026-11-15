@@ -1,0 +1,82 @@
+# ~/.config/ghostty/config
+# Ghostty uses `key = value` syntax. Comments must be on their OWN line.
+# See all options: ghostty +show-config --default --docs
+
+# --- Font ---
+font-family = "JetBrains Mono"
+font-size = 13
+# Uncomment to disable ligatures:
+# font-feature = -liga
+# A little extra line spacing:
+adjust-cell-height = 10%
+
+# --- Theme / colors ---
+# Run `ghostty +list-themes` to browse. Names are Title Case since v1.2.0.
+theme = "Catppuccin Mocha"
+# Or auto-switch with system light/dark mode:
+# theme = "light:Catppuccin Latte,dark:Catppuccin Mocha"
+background-opacity = 0.95
+# Frosted-glass blur behind the transparent background (also applies to the titlebar/tabs):
+background-blur = 20
+
+# --- Cursor ---
+cursor-style = block
+cursor-style-blink = true
+
+# --- Window ---
+window-padding-x = 8
+window-padding-y = 8
+window-padding-balance = true
+window-save-state = always
+# Tabs are disabled: plain transparent titlebar, all tab shortcuts unbound below.
+macos-titlebar-style = transparent
+macos-window-buttons = visible
+macos-titlebar-proxy-icon = hidden
+window-title-font-family = "JetBrains Mono"
+window-show-tab-bar = never
+confirm-close-surface = true
+
+# --- Mouse / clipboard ---
+mouse-hide-while-typing = true
+copy-on-select = clipboard
+
+# --- Shell ---
+# Auto-detects zsh/bash/fish/elvish:
+shell-integration = detect
+shell-integration-features = cursor,sudo,title,ssh-terminfo,ssh-env
+
+# --- macOS specifics ---
+# Lets Option send Alt for shell keybinds:
+macos-option-as-alt = true
+
+# --- Keybinds ---
+keybind = cmd+shift+comma=reload_config
+keybind = cmd+enter=toggle_fullscreen
+keybind = cmd+d=new_split:right
+keybind = cmd+shift+d=new_split:down
+keybind = cmd+alt+left=goto_split:left
+keybind = cmd+alt+right=goto_split:right
+# --- No tabs ---
+keybind = cmd+t=unbind
+keybind = cmd+alt+w=unbind
+keybind = cmd+shift+[=unbind
+keybind = cmd+shift+]=unbind
+keybind = ctrl+tab=unbind
+keybind = ctrl+shift+tab=unbind
+keybind = cmd+1=unbind
+keybind = cmd+2=unbind
+keybind = cmd+3=unbind
+keybind = cmd+4=unbind
+keybind = cmd+5=unbind
+keybind = cmd+6=unbind
+keybind = cmd+7=unbind
+keybind = cmd+8=unbind
+keybind = cmd+9=unbind
+keybind = cmd+digit_1=unbind
+keybind = cmd+digit_2=unbind
+keybind = cmd+digit_3=unbind
+keybind = cmd+digit_4=unbind
+keybind = cmd+digit_5=unbind
+keybind = cmd+digit_6=unbind
+keybind = cmd+digit_7=unbind
+keybind = cmd+digit_8=unbind

@@ -1,6 +1,6 @@
 # My Dotfiles
 
-My terminal setup on macOS: **Neovim** (LazyVim) inside **tmux**, both themed from the same terminal palette. The older Arch Linux desktop configs (i3, Polybar, Rofi, picom, kitty) live here too.
+My terminal setup on macOS: **Neovim** (LazyVim) inside **tmux** in **Ghostty**, with Neovim and tmux themed from the same terminal palette. The older Arch Linux desktop configs (i3, Polybar, Rofi, picom, kitty) live here too.
 
 ![Neovim and tmux](screenshots/nvim-tmux.png)
 
@@ -18,6 +18,7 @@ On macOS:
 
 ```bash
 brew install neovim tmux ripgrep fd go node
+brew install --cask ghostty
 ```
 
 Use a [Nerd Font](https://www.nerdfonts.com/) in your terminal so the icons render. On the first start, Neovim installs its plugins, and Mason installs the language servers.
@@ -48,6 +49,15 @@ Use a [Nerd Font](https://www.nerdfonts.com/) in your terminal so the icons rend
 | `prefix r` | reload the config |
 
 The status bar sits at the top. It uses only ANSI colour indices, so it follows whatever theme the terminal uses, and the background stays transparent. Mouse support is on, windows are numbered from 1, and Esc is fast for Neovim.
+
+## Ghostty
+
+`ghostty/config` is the macOS terminal config:
+
+- **Look:** JetBrains Mono at 13 pt with 10% extra line height, the Catppuccin Mocha theme, 95% opacity with background blur, and a transparent titlebar. A Rosé Pine theme is also in `ghostty/themes/`.
+- **No tabs:** the tab bar is hidden and every tab shortcut is unbound, because tmux handles windows.
+- **Keys:** `cmd+d` and `cmd+shift+d` split the window, `cmd+alt+←/→` moves between splits, `cmd+enter` toggles fullscreen and `cmd+shift+,` reloads the config.
+- **Other settings:** copy on select, Option works as Alt, and shell integration is on.
 
 ## Arch Linux (i3)
 
