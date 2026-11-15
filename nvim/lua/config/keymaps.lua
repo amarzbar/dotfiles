@@ -8,3 +8,11 @@
 -- Press i or a in the terminal buffer to type into the shell again.
 vim.keymap.set("t", "<C-v>", [[<C-\><C-n>v]], { desc = "Terminal: visual mode" })
 vim.keymap.set("t", "<C-x>", [[<C-\><C-n>]], { desc = "Terminal: normal mode" })
+
+-- Resize splits with Ctrl+Shift+h/j/k/l, 5 cells a step like tmux's prefix H/J/K/L.
+-- Needs a terminal that reports Ctrl+Shift separately from Ctrl (Ghostty does, and
+-- tmux passes it on with extended-keys).
+vim.keymap.set("n", "<C-S-h>", "<cmd>vertical resize -5<cr>", { desc = "Narrower window" })
+vim.keymap.set("n", "<C-S-l>", "<cmd>vertical resize +5<cr>", { desc = "Wider window" })
+vim.keymap.set("n", "<C-S-j>", "<cmd>resize -5<cr>", { desc = "Shorter window" })
+vim.keymap.set("n", "<C-S-k>", "<cmd>resize +5<cr>", { desc = "Taller window" })
